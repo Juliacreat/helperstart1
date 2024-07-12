@@ -42,7 +42,7 @@ def callback():
 def handle_message(event):
     message = event.message.text
     if re.match('找文具', message):
-        image_message = ImageSendMessage(original_content_url='https://drive.google.com/uc?export=view&id=1VB_dAXoUu918CpGhwAtPleHm7Kx8hHEH')
+        image_message = ImageSendMessage(original_content_url='https://drive.google.com/uc?export=view&id=1VB_dAXoUu918CpGhwAtPleHm7Kx8hHEH', preview_image_url='https://drive.google.com/uc?export=view&id=1VB_dAXoUu918CpGhwAtPleHm7Kx8hHEH')
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('送公文流程', message):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='送公文流程:\n    1.向職員確認還有沒有公文要送?\n    2.集中所有要送的公文\n    3.寫公文傳送紀錄單\n    4.送出公文'))
